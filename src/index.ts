@@ -6,17 +6,19 @@ const CONFIG = {
 
 const runScript = () => {
   try {
-    /* Max script runtime is 6m; it takes ~2m for each batch of 500 threads to be deleted
-     * Therefore, we can only run the loop 3 times to keep it under the runtime threshold
-     */
-    for (let runCnt = 0; runCnt < 3; runCnt++) {
+    const startTime = Date.now();
+    const timeLimit = 240 * 1000; // 4 minutes
+
+    do {
       const threads = GmailApp.search(
         CONFIG.QUERY_STRING,
         CONFIG.STARTING_THREAD,
         CONFIG.MAX_THREADS
       );
       threads.forEach((thread) => thread.moveToTrash());
-    }
+      // Max script runtime is 6m. Deleting 500 Threads takes ~2m.
+      // This WHILE condition will ensure that the loop stops within max runtime
+    } while (Date.now() - startTime < timeLimit);
   } catch (error) {
     Logger.log(error);
   }
