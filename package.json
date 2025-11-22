@@ -1,0 +1,25 @@
+{
+  "name": "gas-gmail-cleanup",
+  "version": "1.0.0",
+  "description": "A quick script to delete all emails categorized as Promotions, Social, & Forums.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpelton-stroud/gas-gmail-cleanup.git"
+  },
+  "keywords": [
+    "GAS",
+    "Google-Apps-Script",
+    "Gmail",
+    "Cleanup"
+  ],
+  "author": "jpelton-stroud",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/jpelton-stroud/gas-gmail-cleanup/issues"
+  },
+  "homepage": "https://github.com/jpelton-stroud/gas-gmail-cleanup#readme"
+}
