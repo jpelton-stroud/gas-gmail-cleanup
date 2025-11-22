@@ -1,6 +1,6 @@
 const CONFIG = {
-  QUERY_STRING: "category:{Promotions Social Forums}",
-  STARTING_THREAD: 100, // Keeps the 100 most recent threads from being deleted
+  QUERY_STRING: "category:{Promotions Social Updates Forums}",
+  STARTING_THREAD: 200, // Keeps the 100 most recent threads from being deleted
   MAX_THREADS: 500, // This is the max number of threads Search can return
 };
 
